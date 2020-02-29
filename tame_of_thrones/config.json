@@ -1,0 +1,18 @@
+{
+    "std_input_format": "^([A-Z]+\\s?) ([A-Z]+\\s?)+$",
+
+    "home_kingdom": {
+        "name": "SPACE",
+        "num_of_kingdoms_to_win": 3
+    },
+
+    "emblems" : {
+        "SPACE": "Gorilla",
+        "LAND": "Panda",
+        "WATER": "Octopus",
+        "ICE": "Mammoth",
+        "AIR": "Owl",
+        "FIRE": "Dragon"
+    }
+
+}

@@ -20,7 +20,8 @@ __________________________
 
 How to run the program:  
 	Run the geektrust.py file in tame_of_thrones folder (tame_of_thrones/geektrust.py)
-	Example:  
+	Example:
+        pip3 install -r ../requirements.txt  
 		python3.6 -m geektrust.py <absolute_path_to_input_file>
 
 __________________________  

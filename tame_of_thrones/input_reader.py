@@ -9,6 +9,7 @@ class InputError(BaseException):
 class InputFormatError(InputError):
     pass
 
+
 def read_input(filename):
     """Reads the input of the file.
     
@@ -32,9 +33,7 @@ def validate_format(regex, rows):
 
     Returns:
         bool: Return value True if all rows meet regex, else False.
-
     """
-
     for row in rows:
         if not re.match(regex, row):
             raise InputFormatError("Input format error.")

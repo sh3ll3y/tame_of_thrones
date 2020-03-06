@@ -1,10 +1,11 @@
 """ The Tame Of Thrones CLI. """
 
-import sys
-import input_reader as ir
+
 import cryptography as crypto
-import string_handler as sh
+import input_reader as ir
 import output as op
+import string_handler as sh
+import sys
 
 from config import config_data
 

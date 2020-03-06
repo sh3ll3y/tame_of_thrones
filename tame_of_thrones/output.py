@@ -1,5 +1,6 @@
 """Module that holds the output class."""
 
+
 class Outputter(object):
     """Class that print the output in different formats."""
 
@@ -15,4 +16,3 @@ class Outputter(object):
             print('NONE')
         else:
             print(self.home_kingdom, ' '.join(self.allies))
-

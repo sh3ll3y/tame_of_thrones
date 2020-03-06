@@ -1,13 +1,17 @@
 """The string handler module."""
 
+
 class StringHandlerError(BaseException):
     pass
 
+
 class InsufficientDataError(StringHandlerError):
-    pass 
+    pass
+
 
 class InvalidInputError(StringHandlerError):
-    pass 
+    pass
+
 
 def is_string(input_str):
     """To know if a value of list of all values is of stype str.
@@ -19,7 +23,7 @@ def is_string(input_str):
     """
     if not isinstance(input_str, list):
         input_str = [input_str]
-    
+
     for value in input_str:
         if not isinstance(value, str):
             return False
@@ -33,7 +37,7 @@ def char_counter(input_str):
 
         Retuns:
             dict: Dictionary of characters as keys and their number of occurences as values.
-                Example: "geek" -> {'g':1, 'e':2, 'k':1}     
+                Example: "geek" -> {'g':1, 'e':2, 'k':1}
     """
     if not is_string(input_str):
         raise InvalidInputError
@@ -42,6 +46,7 @@ def char_counter(input_str):
     for char in input_str:
         count[char] = count[char] + 1 if count.get(char, None) else 1
     return count
+
 
 def contains_sub_str_letters(main_str=None, sub_str=None):
     """Returns true of all characters of substring are in main string.

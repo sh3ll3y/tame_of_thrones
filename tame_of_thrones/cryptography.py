@@ -1,5 +1,6 @@
 """ Class to hold cryptograhic methods. """
 
+
 class SeasarCipher(object):
     """Implements Seasar Cipher."""
 
@@ -21,7 +22,7 @@ class SeasarCipher(object):
 
         Returns:
             string: encrypted message in string format.
-        
+
         """
 
         encrypted_msg = ""
@@ -30,10 +31,8 @@ class SeasarCipher(object):
             num_of_shifts = self.cipher_key % self.NUM_OF_ENGLISH_LETTERS
             new_ordinal = ordinal + num_of_shifts
             if new_ordinal > self.MAX_ORDINAL:
-                new_ordinal = (self.MIN_ORDINAL - 1) + (new_ordinal - self.MAX_ORDINAL)
+                new_ordinal = (self.MIN_ORDINAL - 1) + \
+                    (new_ordinal - self.MAX_ORDINAL)
             encrypted_msg += chr(new_ordinal)
 
         return encrypted_msg
-
-
-

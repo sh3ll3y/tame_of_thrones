@@ -1,7 +1,8 @@
 """Holds test cases for cyptography classes."""
 
-import cryptography as crypto # pylint: disable=import-error
+import cryptography as crypto  # pylint: disable=import-error
 import unittest
+
 
 class TestSeasar(unittest.TestCase):
     """Test of SeasarCypher."""

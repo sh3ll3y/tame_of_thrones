@@ -3,8 +3,10 @@
 
 import re
 
+
 class InputError(BaseException):
     pass
+
 
 class InputFormatError(InputError):
     pass
@@ -12,7 +14,7 @@ class InputFormatError(InputError):
 
 def read_input(filename):
     """Reads the input of the file.
-    
+
     Args:
         filename (string): Path of the file.
 
@@ -23,6 +25,7 @@ def read_input(filename):
     with open(filename, "r") as fp:
         data = fp.readlines()
     return [row.strip() for row in data]
+
 
 def validate_format(regex, rows):
     """Validates each row against regex.

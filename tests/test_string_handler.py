@@ -7,6 +7,7 @@ import unittest
 class TestStringHandler(unittest.TestCase):
     """Tests of string handler functions"""
 
+
     def test_if_is_string_method_returns_True_when_input_is_of_type_string(
             self):
         input_string = "hello"

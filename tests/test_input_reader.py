@@ -12,6 +12,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 class TestInputReader(unittest.TestCase):
     """Tests of input reader functions."""
 
+
     def test_if_correct_number_of_rows_are_returned_from_input_file(self):
         input_file = os.path.join(
             CURRENT_DIR, "test_input_files/test_input.txt")

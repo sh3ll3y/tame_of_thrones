@@ -10,6 +10,7 @@ from unittest.mock import patch
 class TestOutput(unittest.TestCase):
     """Tests for output class."""
 
+
     def setUp(self):
         self.home_kingdom = "HOMIE"
         self.ally_kingdoms = ["ALLYONE", "ALLYTWO", "ALLYTHREE"]

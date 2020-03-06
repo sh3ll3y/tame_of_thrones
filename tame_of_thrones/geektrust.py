@@ -1,4 +1,4 @@
-""" The Tame Of Thrones CLI. """
+"""The Tame Of Thrones CLI."""
 
 
 import cryptography as crypto
@@ -16,7 +16,6 @@ def print_output(home_kingdom_name, ally_kingdoms, num_of_allies_required):
         ally_kingdoms,
         num_of_allies_required)
     output.print_standard_output()
-
 
 def main():
     input_file = sys.argv[1]

@@ -4,6 +4,7 @@
 class Outputter(object):
     """Class that print the output in different formats."""
 
+
     def __init__(self, home_kingdom, allies, num_of_allies_required=0):
         self.home_kingdom = home_kingdom
         self.allies = allies

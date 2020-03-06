@@ -8,6 +8,7 @@ class SeasarCipher(object):
     MIN_ORDINAL = ord('A')
     MAX_ORDINAL = ord('Z')
 
+
     def __init__(self, cipher_key):
         self.cipher_key = cipher_key
 
@@ -24,7 +25,6 @@ class SeasarCipher(object):
             string: encrypted message in string format.
 
         """
-
         encrypted_msg = ""
         for char in message:
             ordinal = ord(char)

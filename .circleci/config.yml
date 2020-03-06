@@ -17,6 +17,10 @@ jobs:
       - checkout
       - run:
           command: python3.6 -B -m unittest discover -s tests -t .
+    post:
+      - coverage run src/*.py
+      - coverage report
+      - coveralls
           
 workflows:
   version: 2

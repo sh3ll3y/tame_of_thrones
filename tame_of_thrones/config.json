@@ -6,7 +6,7 @@
         "num_of_kingdoms_to_win": 3
     },
 
-    "emblems" : {
+    "emblems": {
         "SPACE": "Gorilla",
         "LAND": "Panda",
         "WATER": "Octopus",

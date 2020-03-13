@@ -31,6 +31,7 @@ def is_string(input_str):
             return False
     return True
 
+
 def char_counter(input_str):
     """Counts the chars of a string.
 
@@ -49,6 +50,7 @@ def char_counter(input_str):
     for char in input_str:
         count[char] = count[char] + 1 if count.get(char, None) else 1
     return count
+
 
 def contains_sub_str_letters(main_str=None, sub_str=None):
     """Returns true of all characters of substring are in main string.

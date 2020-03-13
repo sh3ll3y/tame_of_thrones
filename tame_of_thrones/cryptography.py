@@ -1,4 +1,4 @@
-""" Class to hold cryptograhic methods. """
+""" Class to hold cryptographic methods. """
 
 
 class SeasarCipher(object):
@@ -7,7 +7,6 @@ class SeasarCipher(object):
     NUM_OF_ENGLISH_LETTERS = 26
     MIN_ORDINAL = ord('A')
     MAX_ORDINAL = ord('Z')
-
 
     def __init__(self, cipher_key):
         self.cipher_key = cipher_key

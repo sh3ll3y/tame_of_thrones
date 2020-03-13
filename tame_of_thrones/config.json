@@ -1,11 +1,8 @@
 {
-    "std_input_format": "^([A-Z]+\\s?) ([A-Z]+\\s?)+$",
+    "std_input_format": "^(?P<name>[A-Z]+) (?P<msg>([A-Z]+\\s?)+)$",
 
-    "home_kingdom": {
-        "name": "SPACE",
-        "num_of_kingdoms_to_win": 3
-    },
-
+    "home_kingdom": "SPACE",
+    "num_of_allies_to_win": 3,
     "emblems": {
         "SPACE": "Gorilla",
         "LAND": "Panda",

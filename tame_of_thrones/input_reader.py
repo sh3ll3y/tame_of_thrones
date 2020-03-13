@@ -26,6 +26,7 @@ def read_input(filename):
         data = fp.readlines()
     return [row.strip() for row in data]
 
+
 def validate_format(regex, rows):
     """Validates each row against regex.
 
@@ -34,10 +35,13 @@ def validate_format(regex, rows):
         rows (list): List of strings
 
     Returns:
-        bool: Return value True if all rows meet regex, else False.
+        list of dictionaries with kingdom as keys and secret message as values.
 
     """
+    lines = []
     for row in rows:
-        if not re.match(regex, row):
+        line = re.match(regex, row)
+        if not line:
             raise InputFormatError("Input format error.")
-    return True
+        lines.append(line.groupdict())
+    return lines

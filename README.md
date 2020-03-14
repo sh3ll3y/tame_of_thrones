@@ -15,7 +15,7 @@ How to run the test cases:
 	To check test coverage, run the below commands in parent foler (needs 'coverage' to be installed):
 	    coverage run -m unittest discover
 		coverage report -m
-	Current test coverage is 97%
+	Current test coverage is 98%
 __________________________  
 
 How to run the program:  

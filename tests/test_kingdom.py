@@ -24,20 +24,22 @@ class TestKingdom(unittest.TestCase):
             self.assertEqual(self.kingdom_obj.cipher_key, length_of_emblem)
             self.assertEqual(self.kingdom_obj.allies, [])
 
-    def test_send_one_correct_msg_and_one_incorrect_msg_to_other_kingdoms(self):
+    def test_send_one_correct_msg_and_one_incorrect_msg_to_other_kingdoms(
+            self):
         msg = [{"name": "KINGDOMTWO", "msg": "'NJVKUGGNVCRRFX'"},
-            {"name": "KINGDOMTHREE", "msg": "ABCEFGHIEMBLEMIJK"}
-        ]
+               {"name": "KINGDOMTHREE", "msg": "ABCEFGHIEMBLEMIJK"}
+               ]
         with patch.dict(config_data, test_config_data, clear=True):
             self._setUp()
             actual = self.kingdom_obj.send_secret_msg(msg)
             expected = ["KINGDOMTWO"]
             self.assertEqual(actual, expected)
 
-    def test_send_two_correct_messages_to_other_kingdoms_returns_kingdom_names(self):
+    def test_send_two_correct_messages_to_other_kingdoms_returns_kingdom_names(
+            self):
         msg = [{"name": "KINGDOMTWO", "msg": "NJVKUGGNVCRRFX"},
-            {"name": "KINGDOMTHREE", "msg": "PLXMWIIPXESSCPP"}
-        ]
+               {"name": "KINGDOMTHREE", "msg": "PLXMWIIPXESSCPP"}
+               ]
         with patch.dict(config_data, test_config_data, clear=True):
             self._setUp()
             actual = self.kingdom_obj.send_secret_msg(msg)
@@ -46,8 +48,8 @@ class TestKingdom(unittest.TestCase):
 
     def test_no_correct_message_to_other_kingdoms_returns_empty_list(self):
         msg = [{"name": "KINGDOMTWO", "msg": "KINGDOMTWONOCIPHER"},
-            {"name": "KINGDOMTHREE", "msg": "KINGDUMTHRI"}
-        ]
+               {"name": "KINGDOMTHREE", "msg": "KINGDUMTHRI"}
+               ]
         with patch.dict(config_data, test_config_data, clear=True):
             self._setUp()
             actual = self.kingdom_obj.send_secret_msg(msg)
@@ -66,7 +68,8 @@ class TestKingdom(unittest.TestCase):
             result = self.kingdom_obj.receive_secret_msg('INKORRECT')
             self.assertFalse(result)
 
-    def test_form_rule_with_sufficient_allies_returns_kingdom_with_allies(self):
+    def test_form_rule_with_sufficient_allies_returns_kingdom_with_allies(
+            self):
         with patch.dict(config_data, test_config_data, clear=True):
             self._setUp()
             self.kingdom_obj.allies = ["KINGDOMTWO", "KINGDOMTHREE"]
@@ -75,7 +78,8 @@ class TestKingdom(unittest.TestCase):
             expected = self.kingdom_obj.form_rule()
             self.assertEqual(actual, expected)
 
-    def test_form_rule_with_insufficient_allies_returns_kingdom_with_allies(self):
+    def test_form_rule_with_insufficient_allies_returns_kingdom_with_allies(
+            self):
         with patch.dict(config_data, test_config_data, clear=True):
             self._setUp()
             self.kingdom_obj.allies = ["KINGDOMTWO"]

@@ -14,13 +14,13 @@ class Kingdom(object):
 
     def send_secret_msg(self, messages):
         """ Sends the secret message to the respective kingdom.
-        
+
         Args:
             message(list): list of dictionaries with kingdom as keys and secret message as values.
 
         Returns:
             list of allies.
-        
+
         """
         for msg in messages:
             kingdom = msg.get("name")
@@ -54,7 +54,7 @@ class Kingdom(object):
             list: home kingdom followed by sufficient allies in a list, else ["NONE"].
 
         """
-                
+
         if len(self.allies) >= config_data["num_of_allies_to_win"]:
             return [self.name] + self.allies
         return ["NONE"]
